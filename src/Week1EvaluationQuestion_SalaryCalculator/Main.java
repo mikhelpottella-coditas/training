@@ -70,3 +70,27 @@ public class Main {
         }
     }
 }
+
+
+
+/*
+
+output:
+
+select the employee type
+
+ 1.Developer  2.Manager  3.Intern   Exit:0
+1
+Enter the required data in the following Format
+baseSalary overTimeHours attendedDays rating
+50000 22 22 2
+
+Gross Amount                   :     61000.00
+Performance Based Bonus        :      1220.00
+Tax Deduction                  :      6222.00
+PF Deduction                   :      7320.00
+Attendance Deduction           :         0.00
+************************************************************
+Net salary                     :     48678.00
+
+* */
