@@ -19,7 +19,6 @@ public abstract class Employee {
         else if (total < 150000 && total > 100001) taxable = (total * 0.15);
         else if (total < 100000 && total > 50001) taxable = (total * 0.10);
         else if (total <= 50000) taxable = (total * 0.05);
-        System.out.println(taxable+"tax");
         return taxable;
     }
 

@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (true) {
-            System.out.println("select the employee type \n 1.Developer  2.Manager  3.Intern   Exit:0");
+            System.out.println("select the employee type \n\n 1.Developer  2.Manager  3.Intern   Exit:0");
             int input = sc.nextInt();
             if (input == 0) break;
             switch (input) {
@@ -26,7 +26,7 @@ public class Main {
                     // done with handling inputs
 
                     Developer developer = new Developer(baseSalary, overTime, attendedDays, rating);
-                    System.out.printf("so the salary to be credited is : %f2 \n", developer.getNetSalary());
+                    System.out.printf("%-30s : %12.2f \n\n", "Net salary",developer.getNetSalary());
                     break;
                 }
                 case 2: {
@@ -45,7 +45,7 @@ public class Main {
                     // done with handling inputs
 
                     Manager manager = new Manager(baseSalary, teamSize, attendedDays, rating);
-                    System.out.printf("so the salary to be credited is : %f2 \n", manager.getNetSalary());
+                    System.out.printf("%-30s : %12.2f \n\n", "Net salary",manager.getNetSalary());
                     break;
                 }
                 case 3: {
@@ -61,7 +61,7 @@ public class Main {
                     }
                     // done with handling inputs
                     Intern intern = new Intern(baseSalary, attendedDays, rating);
-                    System.out.printf("so the salary to be credited is : %f2 \n", intern.getNetSalary());
+                    System.out.printf("%-30s : %12.2f \n\n", "Net salary",intern.getNetSalary());
                     break;
                 }
                 default:
