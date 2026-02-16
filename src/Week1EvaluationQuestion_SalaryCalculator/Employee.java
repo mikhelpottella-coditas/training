@@ -12,7 +12,7 @@ public abstract class Employee {
         this.rating = rating;
     }
 
-    double getTax(double gross, double performanceBasedBonus) {
+    double getTax(double gross, double performanceBasedBonus) { // to calculate the tax
         double total = gross + performanceBasedBonus;
         double taxable=0;
         if (total > 150000) taxable = (total * 0.20);
@@ -23,5 +23,10 @@ public abstract class Employee {
         return taxable;
     }
 
-    abstract double getNetSalary();
+    double getAttendanceInduction(){ // to calculate the attendance induction.
+        double dailySalary = (double) baseSalary / 22;
+        int absentDays = 22 - attendedDays;
+        return dailySalary * absentDays;
+    }
+    abstract double getNetSalary(); // must be implemented by all the subclasses
 }
