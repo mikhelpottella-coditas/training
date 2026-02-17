@@ -22,6 +22,15 @@ public abstract class Employee {
         return taxable;
     }
 
+    void print(double gross,double performanceBasedBonus,double taxable,double PFDeduction,double attendanceDeduction){ // to print the salary breakDown
+        System.out.printf("%-30s : %12.2f%n", "Gross Amount", gross);
+        System.out.printf("%-30s : %12.2f%n", "Performance Based Bonus", performanceBasedBonus);
+        System.out.printf("%-30s : %12.2f%n", "Tax Deduction", taxable);
+        System.out.printf("%-30s : %12.2f%n", "PF Deduction", PFDeduction);
+        System.out.printf("%-30s : %12.2f%n", "Attendance Deduction", attendanceDeduction);
+        System.out.println("*".repeat(60));
+    }
+
     double getAttendanceInduction(){ // to calculate the attendance induction.
         double dailySalary = (double) baseSalary / 22;
         int absentDays = 22 - attendedDays;
